@@ -1,10 +1,10 @@
 import { Entity, PrimaryKey, Property } from "@mikro-orm/core";
-import {Field, Int, ObjectType} from "type-graphql";
+import {Field, ObjectType} from "type-graphql";
 
 @ObjectType()
 @Entity()
 export class Post {
-  @Field(() => Int)
+  @Field()
   @PrimaryKey()
   id!: number;
 
