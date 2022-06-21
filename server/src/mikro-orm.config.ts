@@ -3,6 +3,9 @@ import { __prod__ } from "./constants";
 import { MikroORM } from "@mikro-orm/core";
 import path from "path";
 import {User} from "./entities/User";
+import redis from "redis";
+import session from "express-session";
+
 
 export default {
   migrations: {
@@ -13,6 +16,6 @@ export default {
   dbName: "",
   type: "",
   user: "",
-  password:"!",
+  password:"",
   debug: !__prod__
 } as Parameters<typeof MikroORM.init>[0];
