@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "lireddit-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,24 +7,18 @@
     "watch": "tsc -w",
     "dev": "nodemon dist/index.js",
     "start": "node dist/index.js",
+    "start2": "ts-node src/index.ts",
     "dev2": "nodemon --exec ts-node src/index.ts",
     "create:migration": "mikro-orm migration:create"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SakethGanji/reddit-basic-clone.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SakethGanji/reddit-basic-clone/issues"
-  },
-  "homepage": "https://github.com/SakethGanji/reddit-basic-clone#readme",
   "devDependencies": {
     "@types/connect-redis": "^0.0.14",
+    "@types/cors": "^2.8.7",
     "@types/express": "^4.17.7",
-    "@types/express-session": "1.17.0",
+    "@types/express-session": "^1.17.0",
     "@types/node": "^14.0.27",
     "@types/redis": "^2.8.25",
     "nodemon": "^2.0.4",
@@ -39,6 +33,7 @@
     "apollo-server-express": "^2.16.1",
     "argon2": "^0.26.2",
     "connect-redis": "^5.0.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "graphql": "^15.3.0",
